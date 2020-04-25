@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    <title>Curso Fullstack</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+    <link rel = StyleSheet href="static/style.css" type="text/css">
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body style = "background-image : url(https://images5.alphacoders.com/301/301465.jpg)">
+  <div id = "navbar_inicio">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" id = "edm"> Demonios y Partes Corporeas Faltantes </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="historial"> Historial de Peleas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="objetos"> Objetos de Dororo </a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a href = "{% url 'gestion:logout' %}"> Salir </a>
+          </form>
+        </div>
+      </nav>
+</div>
+
+<div id = "ilo">
+  <h1 align = "center"> Bienvenido a la batalla de Hyakkimaru </h1>
+</div>
+<div id = "ilo">
+  <p align = "center">
+
+    Desde esta pestaña podras elegir el ganador de la batalla por la parte del cuerpo de Hyakkimaru
+
+
+  </p>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <table class="egt">
+  <td>
+  <div class="container">
+    <div class="row">
+      <table class="egt">
+
+        <tr>
+      
+          <th scope="row">Hyakkimaru</th>
+      
+        </tr>
+      
+        <tr>
+      
+          <th><img SRC="https://cdn130.picsart.com/295219035031211.png?type=webp&to=min&r=1024" width="250px" height="500px"></th>
+
+        </tr>
+      
+        <tr>
+      
+        <th> <a href="pelea" class="btn btn-danger btn-circle">
+            <span class="fa fa-trash">Gana!</span>
+            </a>
+        </th>
+      
+        </tr>
+      
+      </table>
+  </div>
+  </div>
+</td>
+<td>
+<div class="container">
+    <div class="row">
+      <table class="egt">
+
+        <tr>
+      
+          <th scope="row">Nombre</th>
+      
+        </tr>
+      
+        <tr>
+      
+          <th><img SRC="https://img2.freepng.es/20190615/tbk/kisspng-portable-network-graphics-clip-art-demon-image-tra-5d05b89a0cf228.787647321560656026053.jpg" width="250px" height="500px"></th>
+      
+        </tr>
+      
+        <tr>
+      
+          <th> <a href="pelea" class="btn btn-danger btn-circle">
+            <span class="fa fa-trash">Gana!</span>
+            </a>
+        </th>
+      
+        </tr>
+      
+      </table>
+  </div>
+  </div>
+</td>
+</table>
+</div>
+</div>
+
+
+</body>

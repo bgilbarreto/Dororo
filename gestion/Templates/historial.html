@@ -1,0 +1,51 @@
+{% extends 'Base/base.html' %}
+
+{% block contenido %}
+
+    <div id = "ilo">
+      <h1 align = "center"> Bienvenido al Historial de Batallas </h1>
+    </div>
+    <div id = "ilo">
+      <h4 align = "center">
+
+        Desde esta pestaña podras ver el listado de Batallas que 
+        ha tenido dororo y tambien quien ha sido el ganador en la misma.
+
+
+      </h4>
+    </div>
+
+<div class="container" id = "ilo">
+    <div class="row">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Demonio</th>
+        <th scope="col">Ganador</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in obj %} <!-- Django in-html code iteration, similar to JSTL -->
+        <tr>
+            <td>
+                {{item.id}}
+            </td>
+            <td>
+                {{item.Demonio.lugar.nombre}}
+            </td>
+            <td>
+              {{item.Demonio.nombre}}
+            </td>
+            <td>
+                {{item.ganador}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+  {% endblock contenido %}

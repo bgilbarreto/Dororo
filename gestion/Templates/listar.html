@@ -1,0 +1,81 @@
+{% extends 'Base/base.html' %}
+
+{% block contenido %}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <div id = "ilo">
+      <h1 align = "center"> Bienvenido a la pagina de gestion de partes  </h1>
+    </div>
+    <div id = "ilo">
+      <h4 align = "center">
+
+        Desde esta pestaña podras ver el listado de demonios que 
+        aun conservan piezas de dororo y puedes navegar a otras
+        ventanas.
+
+
+      </h4>
+    </div>
+
+<div class="container" id = "ilo">
+    <div class="row">
+<table class="table" id = 'Mytable'>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre Demonio</th>
+        <th scope="col">Parte en posesion</th>
+        <th scope="col">Lugar de Ubicacion</th>
+        <th scope="col">Imagen de Demonio</th>
+        <th scope="col">Pelear</th>
+        <th class=""><a href="{% url 'gestion:demon_print_one' %}" class="btn btn-primary">Imprimir</a></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in obj %} <!-- Django in-html code iteration, similar to JSTL -->
+        {% if item.ganador != 'Dororo' %}
+          <tr>
+              <td>
+                  {{item.id}}
+              </td>
+              <td>
+                  {{item.nombre}}
+              </td>
+              <td>
+                  {{item.parte.nombre}}
+              </td>
+              <td>
+                  {{item.lugar.nombre}}
+              </td>
+              <td>
+                  <div align = "center"> <img id = "lul" src = 'static/demon.jpg'></div>
+              </td>
+              <td>
+                  <a href="{% url 'gestion:inBattle' %}" class="btn btn-danger btn-circle">
+                      <span class="fa fa-trash">Pelea!</span>
+                  </a>
+              </td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+    </tbody>
+  </table>
+
+  <script>
+    $(document).ready( function () {
+      $('#Mytable').DataTable(
+    {
+      responsive = true
+    }
+  
+      );
+  } );
+  </script>
+
+  </div>
+
+  </div>
+
+  {% endblock contenido %}

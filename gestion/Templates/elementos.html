@@ -1,0 +1,53 @@
+{% extends 'Base/base.html' %}
+
+{% block contenido %}
+
+    <div id = "ilo">
+      <h1 align = "center"> Objetos de Dororo  </h1>
+    </div>
+
+    <div id = "ilo" class="container">
+        <h4 align = "center"> 
+        En este apartado Puedes ver el registro de objetos que ha obtenido dororo a lo largo de sus viajes acompañando a su amigo a recuperar sus partes
+        </h4>
+    </div>
+
+    <div align = "center"> 
+        <a href="{% url 'gestion:inObj' %}" class="btn btn-danger btn-circle">
+            <span class="fa fa-trash"> Añadir item Aqui</span>
+        </a>
+    </div>
+    <div class="container">
+        Tabla de Objetos
+    </div>
+
+<div class="container" id = "ilo">
+    <div class="row">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Objeto</th>
+        <th scope="col">Procedencia</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in obj %} <!-- Django in-html code iteration, similar to JSTL -->
+        <tr>
+            <td>
+                {{item.id}}
+            </td>
+            <td>
+                {{item.nombre}}
+            </td>
+            <td>
+                {{item.procedencia}}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+  {% endblock contenido %}
